@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CurrencyConverterMaterialPage extends StatelessWidget{
@@ -11,7 +12,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget{
                         width: 2.5,
                         style: BorderStyle.solid,                       
                     ),
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(10),
                     );
 
     return Scaffold(
@@ -32,7 +33,8 @@ class CurrencyConverterMaterialPage extends StatelessWidget{
                 //Padding 
                 
                 Padding(
-                  padding: const EdgeInsets.all(12.10),
+                  padding: const EdgeInsets.all(10.0),
+                 
                   child: TextField(
                         style: TextStyle(
                         color: Colors.black,
@@ -55,11 +57,39 @@ class CurrencyConverterMaterialPage extends StatelessWidget{
                     ),
                   
                    ),
-                ),                    
-                                 
-              ],                
-            ),  
-         ),
-    );
-  }
-}
+                ),    
+              //button 
+
+              
+              //raised
+             //appear like a text  
+                    Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: TextButton(
+                    onPressed: () {
+                      if (kDebugMode) {
+                        debugPrint('Button Clicked');
+                      }
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(Colors.black),
+                      foregroundColor: WidgetStatePropertyAll(Colors.white),
+                      minimumSize: WidgetStatePropertyAll(
+                        Size(double.infinity, 50),
+                      ),
+                      shape: WidgetStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+                    child: const Text('Convert'),
+                  ),
+                ),
+
+                              ]              
+                            ),  
+                        ),
+                    );
+                  }
+          }
