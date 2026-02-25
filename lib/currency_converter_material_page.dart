@@ -24,7 +24,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget{
                       color: Colors.black,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'Please Enter Amount in USD',
+                      hintText: 'Please Enter Amount in USD, from win',
                       hintStyle: TextStyle(
                         color:Colors.black,
                     ),
